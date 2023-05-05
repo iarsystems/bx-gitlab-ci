@@ -1,6 +1,9 @@
 <img align="right" src="docs/gitlab-logo.png" />
 
-# Tutorial<br/>IAR Build Tools for Linux in a GitLab CI 
+# Tutorial<br/>IAR Build Tools for Linux in a GitLab CI
+
+## Disclaimer 
+The information provided in this repository is subject to change without notice and does not represent a commitment on any part of IAR. While the information contained herein is useful as reference for DevOps Engineers willing to implement Continuous Integration using IAR Tools, IAR assumes no responsibility for any errors, omissions or particular implementations.
 
 Each of the __IAR Build Tools for Linux__ packages requires its specific license. Please feel free to [__contact us__](https://iar.com/about/contact) if you would like to learn how to get access to them.
 
