@@ -24,7 +24,7 @@ You also will need:
    - or a GitLab [enterprise account][gl-join-url].
 
 >[!NOTE]
->This guide was based in the options available on GitLab v17.4.
+>This guide was based on the options available in GitLab v17.4.
 
 ## Quickstart
 Under your organization's GitLab account:
