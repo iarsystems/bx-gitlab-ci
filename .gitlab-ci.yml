@@ -1,0 +1,72 @@
+# BXARM on Linux
+
+# This workflow will run when a push is made to any branch in the repository
+
+variables: 
+  TARGET_DIR: '/opt/iarsystems/bxarm/arm/bin'
+  COMMON_DIR: '/opt/iarsystems/bxarm/common/bin'
+  
+build-library:
+  tags:
+    - self-hosted
+  stage: .pre 
+  only:
+    - branches
+  needs: []
+  script:
+    - echo "Check compiler version..."
+    - $TARGET_DIR/iccarm --version
+    - echo "Build library..."
+    - $COMMON_DIR/iarbuild ./project/EWARM/ChecksumLibrary.ewp -make Debug -log all
+  artifacts:
+    paths:
+      - project/EWARM/Debug/Exe/ChecksumLibrary.a
+    expire_in: 1 week
+
+# Comment out the `cstat-library` job if your license has no IAR C-STAT for static code analysis
+cstat-library:
+  tags:
+    - self-hosted
+  stage: build
+  only:
+    - branches
+  needs: ["build-library"]
+  script:
+    - echo "Analyzing library..."
+    - $COMMON_DIR/iarbuild project/EWARM/ChecksumLibrary.ewp -cstat_analyze Debug -log all
+    - $COMMON_DIR/iarbuild project/EWARM/ChecksumLibrary.ewp -cstat_report Debug -log all
+  artifacts:
+    paths:
+      - project/EWARM/Debug/C-STAT/*.html
+    expire_in: 1 week  
+
+build-project:
+  tags:
+    - self-hosted
+  stage: build
+  only:
+    - branches
+  needs: ["build-library"]
+  script:
+    - echo "Building project..."
+    - $COMMON_DIR/iarbuild project/EWARM/project.ewp -make Debug -log all
+  artifacts:
+    paths:
+      - project/EWARM/Debug/Exe/project.out
+
+# Comment out the `cstat-project` job if your license has no IAR C-STAT for static code analysis
+cstat-project:
+  tags:
+    - self-hosted
+  stage: build
+  only:
+    - branches
+  needs: ["build-project"]
+  script:
+    - echo "Analyzing project..."
+    - $COMMON_DIR/iarbuild project/EWARM/project.ewp -cstat_analyze Debug -log all
+    - $COMMON_DIR/iarbuild project/EWARM/project.ewp -cstat_report Debug -log all
+  artifacts:
+    paths:
+      - project/EWARM/Debug/C-STAT/*.html
+    expire_in: 1 week
