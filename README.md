@@ -60,7 +60,7 @@ You will be taken to the next page for registering a newly created runner.
 - When asked for __Entering an executor__, type `shell`.
 - Once "🎉 You've registered a new runner!", click `  View runners  `.
 
-![image](https://github.com/user-attachments/assets/43738619-9d55-4151-89b4-9cda3081a225)
+![image](https://github.com/user-attachments/assets/91c21f75-02b3-44ff-8d52-ffc349a8c24f)
 
 
 You can have as many parallel build nodes with runners as your license allows you to. [Contact IAR Sales](https://iar.com/about/contact) for expanding your build capacity.
