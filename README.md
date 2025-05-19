@@ -47,6 +47,7 @@ For technical support contact [IAR Customer Support][url-iar-customer-support].
 
 For questions or suggestions related to this example: try the [wiki][url-repo-wiki] or check [earlier issues][url-repo-issue-old]. If those don't help, create a [new issue][url-repo-issue-new] with detailed information.
 
+[^1]: The use of these images is subject to the [IAR Software License Agreement](https://github.com/iarsystems/containers/blob/master/LICENSE.md) and requires a valid subscription-based activation token for operation. If you are not yet a subscriber, please [contact us](https://iar.com/about/contact) for more information.
 
 <!-- links -->
 [url-iar-customer-support]: https://iar.my.site.com/mypages/s/contactsupport
