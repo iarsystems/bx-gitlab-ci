@@ -9,7 +9,7 @@
 
 
 ## Introduction
-From a CI/CD perspective, the [IAR Build Tools for Arm](https://iar.com/cx) comes with everything you need to build embedded firmware projects from the command line. This example provides a simple example with general guidelines on how to set up a CI/CD pipeline using [GitLab CI](https://gitlab.com) while taking advantage of the so-called __[GitLab self-managed runners][gl-smr-url]__.
+From a CI/CD perspective, the [IAR Build Tools for Arm](https://iar.com/cx) comes with everything you need to build embedded firmware projects from the command line. This example provides a simple example with general guidelines on how to set up a CI/CD pipeline using [GitLab CI](https://gitlab.com).
 
 In case you need an introduction on how to get started with GitLab, use their [examples](https://docs.gitlab.com/?tab=examples).
 
@@ -32,12 +32,12 @@ Once the importing process is complete, a banner will show up with the message `
 
 
 ## A GitLab workflow example
-On your private repository, navigate to the [`.gitlab-ci.yml`](.gitlab-ci.yml) workflow file. This file uses the [GitLab-flavored YAML](https://docs.gitlab.com/ee/ci/quick_start/#create-a-gitlab-ciyml-file) to describe a workflow containing multiple jobs typically used in embedded firmware projects.
+On your repository, navigate to the [`.gitlab-ci.yml`](.gitlab-ci.yml) workflow file. This file uses the [GitLab-flavored YAML](https://docs.gitlab.com/ee/ci/quick_start/#create-a-gitlab-ciyml-file) to describe a workflow containing multiple jobs typically used in embedded firmware projects.
 
 Refer to the [`.gitlab-ci.yml`](.gitlab-ci.yml) workflow file for detailed comments.
 
 ## Summary
-This example provided an overview of how to get started with the IAR Build Tools for Arm on GitLab using self-managed Linux runners. Development teams can immediately benefit from the comprehensive feedback these modern workflows offer, enabling them to quickly build, analyze, test, and deploy with high quality.
+This example provided an overview of how to get started with the IAR Build Tools for Arm on GitLab CI/CD. Development teams can immediately benefit from the comprehensive feedback these modern workflows offer, enabling them to quickly build, analyze, test, and deploy with high quality.
 
 [__` Follow us `__](https://github.com/iarsystems) on GitHub to get updates about examples like this and more.
 
@@ -56,7 +56,6 @@ For questions or suggestions related to this example: try the [wiki][url-repo-wi
 [gh-iar-url]: https://github.com/iarsystems
     
 [gl-doc-yaml-url]: https://docs.gitlab.com/ee/ci/yaml/gitlab_ci_yaml.html
-[gl-smr-url]: https://docs.gitlab.com/runner
 [gl-join-url]: https://gitlab.com/users/sign_in
 [gl-pipeline-url]: https://docs.gitlab.com/ee/ci/pipelines
 
